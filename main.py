@@ -29,9 +29,9 @@ def paste_text():
 
 # Open a new browser tab with the given URL and paste the prompt
 def ask_gpt(prompt):
-    URL = read_config('config.conf')['URL']
+    URL = read_config("C:\\Users\\diama\\OneDrive\\Coding\\GPTSearcher\\config.conf")['URL']
     webbrowser.open_new_tab(URL)
-    if prompt:
+    if prompt or prompt.strip() != "":
         pyperclip.copy(prompt)
         time.sleep(2)
         paste_text()
