@@ -40,11 +40,7 @@ def ask_gpt(prompt):
 # Delays are to ensure clipboard is updated
 def copy_highlighted_text_to_clipboard():
     keyboard = Controller()
-    with keyboard.pressed(Key.ctrl):
-        keyboard.press('c')
-        time.sleep(0.1)
-        keyboard.release('c')
-        time.sleep(0.1)
+    pyautogui.hotkey('ctrl', 'c')
     time.sleep(0.1) 
 
 # Get highlighted text, return None if no new text is highlighted
